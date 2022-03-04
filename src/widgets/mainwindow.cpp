@@ -438,7 +438,7 @@ void MainWindow::setupMenuBar()
     settingsMenu->addAction(_ui->actionRefreshAccount);
     settingsMenu->addAction(_ui->actionStopTasks);
     QMenu *windowMenu = _menuBar->addMenu(tr("&Window"));
-#ifdef Q_OS_OSX
+#ifdef Q_OS_MACOS
     QAction *actionMinimize = new QAction(tr("Minimize"), this);
     actionMinimize->setShortcut(QKeySequence("Ctrl+M"));
     connect(actionMinimize, &QAction::triggered, this, &QWidget::showMinimized);

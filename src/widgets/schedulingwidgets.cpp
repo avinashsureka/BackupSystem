@@ -17,7 +17,7 @@ SchedulingWidgets::SchedulingWidgets(QWidget *parent)
 
 void SchedulingWidgets::enableJobSchedulingButtonClicked()
 {
-#if defined(Q_OS_OSX)
+#if defined(Q_OS_MACOS)
     QMessageBox::StandardButton confirm =
         QMessageBox::question(_parent, tr("Job scheduling"),
                               tr("Register Tarsnap GUI with the OS X"
@@ -97,7 +97,7 @@ void SchedulingWidgets::enableJobSchedulingButtonClicked()
 
 void SchedulingWidgets::disableJobSchedulingButtonClicked()
 {
-#if defined(Q_OS_OSX)
+#if defined(Q_OS_MACOS)
     QMessageBox::StandardButton confirm =
         QMessageBox::question(_parent, tr("Job scheduling"),
                               tr("Unregister Tarsnap GUI from the OS X"

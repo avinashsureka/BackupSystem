@@ -38,7 +38,7 @@ WARNINGS_ENABLE
 #define DEFAULT_SKIP_NODUMP false
 #define DEFAULT_SKIP_FILES_SIZE 0
 #define DEFAULT_SKIP_SYSTEM_ENABLED false
-#if defined Q_OS_OSX
+#if defined Q_OS_MACOS
 #define DEFAULT_SKIP_SYSTEM_FILES                                              \
     ".DS_Store:.localized:.fseventsd:.Spotlight-V100:._.Trashes:.Trashes"
 #elif defined Q_OS_WIN

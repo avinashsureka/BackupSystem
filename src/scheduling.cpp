@@ -14,7 +14,7 @@ WARNINGS_DISABLE
 #include <QString>
 #include <QStringList>
 
-#if defined(Q_OS_OSX)
+#if defined(Q_OS_MACOS)
 #include <QSettings>
 #endif
 
@@ -22,7 +22,7 @@ WARNINGS_ENABLE
 
 #include "debug.h"
 
-#if defined(Q_OS_OSX)
+#if defined(Q_OS_MACOS)
 #define UPDATED_LAUNCHD_PATH_LONG                                              \
     "The OS X launchd scheduling service contained an out-of-date link to "    \
     "Tarsnap GUI (did you upgrade it recently?).\n\nThis has been updated to " \
@@ -120,7 +120,7 @@ static int launchdUnload()
     return (0);
 }
 
-#if defined(Q_OS_OSX)
+#if defined(Q_OS_MACOS)
 static bool launchdLoaded()
 {
     struct cmdinfo pinfo;
@@ -392,7 +392,7 @@ struct scheduleinfo cronDisable_p2(const QString &linesToRemove,
 struct scheduleinfo correctedSchedulingPath()
 {
     struct scheduleinfo info = {SCHEDULE_NOTHING_HAPPENED, "", ""};
-#if defined(Q_OS_OSX)
+#if defined(Q_OS_MACOS)
     QSettings launchdPlist(QDir::homePath()
                                + "/Library/LaunchAgents/com.tarsnap.gui.plist",
                            QSettings::NativeFormat);

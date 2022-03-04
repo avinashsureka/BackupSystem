@@ -309,7 +309,7 @@ OBJECTS_DIR = build/gui/
 
 #OPTIONAL_BUILD_ONLY_TESTS = tests/cli
 
-osx {
+macx {
     LIBS += -framework Foundation
     ICON = resources/logos/tarsnap.icns
     TARGET = Tarsnap
