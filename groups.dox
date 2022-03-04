@@ -1,0 +1,46 @@
+/**
+ * \defgroup widgets-general General-use widgets
+ * \brief Widgets which are small and can be used for multiple purposes.
+ */
+
+/**
+ * \defgroup widgets-setup SetupWizard widgets
+ * \brief Widgets which are only used in the SetupWizard.
+ */
+
+/**
+ * \defgroup widgets-specialized Specialized widgets
+ * \brief Widgets which are used as components of larger screens.
+ */
+
+/**
+ * \defgroup widgets-main Main widgets
+ * \brief Widgets which are the main "windows" or "screens" of the
+ * application.
+ */
+
+/**
+ * \defgroup lib-widgets Library widgets
+ * \brief Widgets which may be useful for other projects.
+ */
+
+/**
+ * \defgroup persistent Database-stored information
+ * \brief Information which is stored in a database.
+ */
+
+/**
+ * \defgroup background-tasks Background tasks
+ * \brief Tasks which run in the background and emit a signal when
+ * completed.
+ */
+
+/**
+ * \defgroup data Data
+ * \brief Classes which are primarily for data storage.
+ */
+
+/**
+ * \defgroup misc Misc
+ * \brief Classes which don't fit anywhere else.
+ */
