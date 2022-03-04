@@ -258,11 +258,11 @@ RESOURCES +=						\
 	lib/resources/lib-resources.qrc			\
 	resources/resources.qrc
 
-DISTFILES +=						\
-	CHANGELOG					\
-	COPYING						\
-	INSTALL						\
-	README
+#DISTFILES +=						\
+#	CHANGELOG					\
+#	COPYING						\
+#	INSTALL						\
+#	README
 
 DISTFILES += .clang-format
 
@@ -270,14 +270,14 @@ DISTFILES += .clang-format
 TRANSLATIONS = resources/translations/tarsnap-gui_en.ts \
                resources/translations/tarsnap-gui_ro.ts
 
-qtPrepareTool(LRELEASE, lrelease)
-for(tsfile, TRANSLATIONS) {
-	qmfile = $$shadowed($$tsfile)
-	qmfile ~= s,.ts$,.qm,
-	qmdir = $$dirname(qmfile)
-	command = $$LRELEASE -removeidentical $$tsfile -qm $$qmfile
-	system($$command)|error("Failed to run: $$command")
-}
+#qtPrepareTool(LRELEASE, lrelease)
+#for(tsfile, TRANSLATIONS) {
+#	qmfile = $$shadowed($$tsfile)
+#	qmfile ~= s,.ts$,.qm,
+#	qmdir = $$dirname(qmfile)
+#	command = $$LRELEASE -removeidentical $$tsfile -qm $$qmfile
+#	system($$command)|error("Failed to run: $$command")
+#}
 
 # Cleaner source directory
 UI_DIR      = build/gui/
@@ -287,27 +287,27 @@ OBJECTS_DIR = build/gui/
 
 # Start off with tests which require the most compilation units, in order
 # to maximize the benefits of parallel builds.
-UNIT_TESTS =						\
-	tests/mainwindow				\
-	tests/app-cmdline				\
-	tests/app-setup					\
-	tests/translations				\
-	tests/jobstabwidget				\
-	tests/settingswidget				\
-	tests/backuptabwidget				\
-	tests/archivestabwidget				\
-	tests/helpwidget				\
-	tests/persistent				\
-	tests/setupwizard				\
-	tests/taskmanager				\
-	tests/customfilesystemmodel			\
-	tests/small-widgets				\
-	tests/lib-widgets				\
-	tests/consolelog				\
-	tests/task					\
-	tests/core
+#UNIT_TESTS =						\
+#	tests/mainwindow				\
+#	tests/app-cmdline				\
+#	tests/app-setup					\
+#	tests/translations				\
+#	tests/jobstabwidget				\
+#	tests/settingswidget				\
+#	tests/backuptabwidget				\
+#	tests/archivestabwidget				\
+#	tests/helpwidget				\
+#	tests/persistent				\
+#	tests/setupwizard				\
+#	tests/taskmanager				\
+#	tests/customfilesystemmodel			\
+#	tests/small-widgets				\
+#	tests/lib-widgets				\
+#	tests/consolelog				\
+#	tests/task					\
+#	tests/core
 
-OPTIONAL_BUILD_ONLY_TESTS = tests/cli
+#OPTIONAL_BUILD_ONLY_TESTS = tests/cli
 
 osx {
     LIBS += -framework Foundation
@@ -319,76 +319,76 @@ osx {
     QMAKE_POST_LINK += /usr/libexec/PlistBuddy -c \"Set :CFBundleGetInfoString $${VERSION}\" $${INFO_PLIST_PATH} ;
 }
 
-format.commands = find src/ tests/ lib/core/ lib/widgets/ lib/plugins	\
-			-name \"*.h\" -or -name \"*.cpp\" |		\
-			xargs clang-format13 -i
-update_translations.commands = lupdate -locations none -no-obsolete Tarsnap.pro
-QMAKE_EXTRA_TARGETS += format update_translations
+#format.commands = find src/ tests/ lib/core/ lib/widgets/ lib/plugins	\
+#			-name \"*.h\" -or -name \"*.cpp\" |		\
+#			xargs clang-format13 -i
+#update_translations.commands = lupdate -locations none -no-obsolete Tarsnap.pro
+#QMAKE_EXTRA_TARGETS += format update_translations
 
 # The same variable is used in individual tests
-TEST_HOME = /tmp/tarsnap-gui-test
-test_home_prep.commands = @rm -rf "$${TEST_HOME}"
+#TEST_HOME = /tmp/tarsnap-gui-test
+#test_home_prep.commands = @rm -rf "$${TEST_HOME}"
 
 # Prep the tests
-buildtests = $$UNIT_TESTS $$BUILD_ONLY_TESTS
-for(D, buildtests) {
-	cmd=	cd $${D} &&					\
-			CFLAGS=\"$$(CFLAGS)\"			\
-			CXXFLAGS=\"$$(CXXFLAGS)\"		\
-			LDFLAGS=\"$$(LDFLAGS)\"			\
-			QMAKE_CC=\"$${QMAKE_CC}\"		\
-			QMAKE_CXX=\"$${QMAKE_CXX}\"		\
-			QMAKE_LINK=\"$${QMAKE_LINK}\"		\
-			$${QMAKE_QMAKE} -spec $${QMAKESPEC}
-	system($$cmd)|error("Failed to qmake in: $$D")
-}
+#buildtests = $$UNIT_TESTS $$BUILD_ONLY_TESTS
+#for(D, buildtests) {
+#	cmd=	cd $${D} &&					\
+#			CFLAGS=\"$$(CFLAGS)\"			\
+#			CXXFLAGS=\"$$(CXXFLAGS)\"		\
+#			LDFLAGS=\"$$(LDFLAGS)\"			\
+#			QMAKE_CC=\"$${QMAKE_CC}\"		\
+#			QMAKE_CXX=\"$${QMAKE_CXX}\"		\
+#			QMAKE_LINK=\"$${QMAKE_LINK}\"		\
+#			$${QMAKE_QMAKE} -spec $${QMAKESPEC}
+#	system($$cmd)|error("Failed to qmake in: $$D")
+#}
 
-test.commands =		@echo "Compiling tests...";			\
-			for D in $${UNIT_TESTS} $${BUILD_ONLY_TESTS}; do \
-				(cd \$\${D} && \${MAKE} -s);		\
-				err=\$\$?;				\
-				if \[ \$\${err} -gt "0" \]; then	\
-					exit \$\${err};			\
-				fi;					\
-			done;						\
-			echo "Running tests...";			\
-			for D in $${UNIT_TESTS}; do			\
-				(cd \$\${D} && \${MAKE} test -s);	\
-				err=\$\$?;				\
-				if \[ \$\${err} -gt "0" \]; then	\
-					exit \$\${err};			\
-				fi;					\
-			done
-test.depends = test_home_prep
+#test.commands =		@echo "Compiling tests...";			\
+#			for D in $${UNIT_TESTS} $${BUILD_ONLY_TESTS}; do \
+#				(cd \$\${D} && \${MAKE} -s);		\
+#				err=\$\$?;				\
+#				if \[ \$\${err} -gt "0" \]; then	\
+#					exit \$\${err};			\
+#				fi;					\
+#			done;						\
+#			echo "Running tests...";			\
+#			for D in $${UNIT_TESTS}; do			\
+#				(cd \$\${D} && \${MAKE} test -s);	\
+#				err=\$\$?;				\
+#				if \[ \$\${err} -gt "0" \]; then	\
+#					exit \$\${err};			\
+#				fi;					\
+#			done
+#test.depends = test_home_prep
 
 # Prep the optional tests
-optional_buildtests = $$OPTIONAL_BUILD_ONLY_TESTS
-for(D, optional_buildtests) {
-	cmd=	cd $${D} &&					\
-			CFLAGS=\"$$(CFLAGS)\"			\
-			CXXFLAGS=\"$$(CXXFLAGS)\"		\
-			LDFLAGS=\"$$(LDFLAGS)\"			\
-			QMAKE_CC=\"$${QMAKE_CC}\"		\
-			QMAKE_CXX=\"$${QMAKE_CXX}\"		\
-			QMAKE_LINK=\"$${QMAKE_LINK}\"		\
-			$${QMAKE_QMAKE} -spec $${QMAKESPEC}
-	system($$cmd)|error("Failed to qmake in: $$D")
-}
+#optional_buildtests = $$OPTIONAL_BUILD_ONLY_TESTS
+#for(D, optional_buildtests) {
+#	cmd=	cd $${D} &&					\
+#			CFLAGS=\"$$(CFLAGS)\"			\
+#			CXXFLAGS=\"$$(CXXFLAGS)\"		\
+#			LDFLAGS=\"$$(LDFLAGS)\"			\
+#			QMAKE_CC=\"$${QMAKE_CC}\"		\
+#			QMAKE_CXX=\"$${QMAKE_CXX}\"		\
+#			QMAKE_LINK=\"$${QMAKE_LINK}\"		\
+#			$${QMAKE_QMAKE} -spec $${QMAKESPEC}
+#	system($$cmd)|error("Failed to qmake in: $$D")
+#}
 
-optional_buildtest.commands =	@echo "Compiling optional tests...";	\
-			for D in $${OPTIONAL_BUILD_ONLY_TESTS}; do	\
-				(cd \$\${D} && \${MAKE} -s);		\
-				err=\$\$?;				\
-				if \[ \$\${err} -gt "0" \]; then	\
-					exit \$\${err};			\
-				fi;					\
-			done;						\
+#optional_buildtest.commands =	@echo "Compiling optional tests...";	\
+#			for D in $${OPTIONAL_BUILD_ONLY_TESTS}; do	\
+#				(cd \$\${D} && \${MAKE} -s);		\
+#				err=\$\$?;				\
+#				if \[ \$\${err} -gt "0" \]; then	\
+#					exit \$\${err};			\
+#				fi;					\
+#			done;						\
 
 # Yes, this also does distclean
-test_clean.commands =	for D in $${UNIT_TESTS} $${OPTIONAL_BUILD_ONLY_TESTS}; do	\
-				(cd \$\${D} && \${QMAKE} &&		\
-				    \${MAKE} distclean);		\
-			done
-clean.depends += test_clean
+#test_clean.commands =	for D in $${UNIT_TESTS} $${OPTIONAL_BUILD_ONLY_TESTS}; do	\
+#				(cd \$\${D} && \${QMAKE} &&		\
+#				    \${MAKE} distclean);		\
+#			done
+#clean.depends += test_clean
 
-QMAKE_EXTRA_TARGETS += test test_clean clean test_home_prep optional_buildtest
+#QMAKE_EXTRA_TARGETS += test test_clean clean test_home_prep optional_buildtest
