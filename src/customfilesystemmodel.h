@@ -5,11 +5,11 @@
 
 WARNINGS_DISABLE
 #include <QFileSystemModel>
-#include <QList>
+//#include <QList>
 #include <QSet>
-#include <QString>
+//#include <QString>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 /* Forward declaration(s). */

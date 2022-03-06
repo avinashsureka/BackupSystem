@@ -3,11 +3,11 @@
 WARNINGS_DISABLE
 #include <QAbstractItemView>
 #include <QKeyEvent>
-#include <QList>
+//#include <QList>
 #include <QListWidgetItem>
 #include <QMessageBox>
 #include <QRegExp>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "messages/archiverestoreoptions.h"

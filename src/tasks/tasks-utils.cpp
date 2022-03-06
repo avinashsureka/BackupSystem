@@ -2,10 +2,10 @@
 
 WARNINGS_DISABLE
 #include <QDir>
-#include <QList>
+//#include <QList>
 #include <QRegExp>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 #include <QVariant>
 WARNINGS_ENABLE
 

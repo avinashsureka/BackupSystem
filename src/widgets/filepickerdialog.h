@@ -5,7 +5,7 @@
 
 WARNINGS_DISABLE
 #include <QDialog>
-#include <QList>
+//#include <QList>
 #include <QObject>
 WARNINGS_ENABLE
 

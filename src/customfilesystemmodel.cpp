@@ -5,7 +5,7 @@ WARNINGS_DISABLE
 #include <QModelIndex>
 #include <QObject>
 #include <QPersistentModelIndex>
-#include <QVector>
+//#include <QVector>
 WARNINGS_ENABLE
 
 CustomFileSystemModel::CustomFileSystemModel()

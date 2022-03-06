@@ -1,9 +1,9 @@
 #include "setupwizard/setupwizard.h"
 
 WARNINGS_DISABLE
-#include <QList>
+//#include <QList>
 #include <QPixmap>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 #include "TSettings.h"

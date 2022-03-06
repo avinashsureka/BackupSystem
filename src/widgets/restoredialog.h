@@ -6,8 +6,8 @@
 WARNINGS_DISABLE
 #include <QDialog>
 #include <QObject>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 WARNINGS_ENABLE
 
 #include "messages/archiveptr.h"

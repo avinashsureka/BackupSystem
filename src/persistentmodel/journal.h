@@ -5,8 +5,8 @@
 
 WARNINGS_DISABLE
 #include <QObject>
-#include <QString>
-#include <QVector>
+//#include <QString>
+//#include <QVector>
 WARNINGS_ENABLE
 
 #include "LogEntry.h"

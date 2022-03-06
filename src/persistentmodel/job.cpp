@@ -8,10 +8,10 @@ WARNINGS_DISABLE
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
-#include <QStringList>
+//#include <QStringList>
 #include <QUrl>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include <algorithm>

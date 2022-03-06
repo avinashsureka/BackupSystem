@@ -2,7 +2,7 @@
 
 WARNINGS_DISABLE
 #include <QMouseEvent>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 /* Forward declaration(s). */

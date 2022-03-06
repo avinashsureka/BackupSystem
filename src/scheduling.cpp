@@ -1,18 +1,18 @@
 #include "scheduling.h"
 
 WARNINGS_DISABLE
-#include <QByteArray>
+//#include <QByteArray>
 #include <QCoreApplication>
 #include <QDir>
 #include <QFile>
 #include <QIODevice>
-#include <QLatin1String>
+//#include <QLatin1String>
 #include <QObject>
 #include <QProcess>
 #include <QProcessEnvironment>
 #include <QRegExp>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 
 #if defined(Q_OS_MACOS)
 #include <QSettings>

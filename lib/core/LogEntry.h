@@ -5,8 +5,8 @@
 
 WARNINGS_DISABLE
 #include <QDateTime>
-#include <QMetaObject>
-#include <QString>
+#include <QMetaType>
+//#include <QString>
 WARNINGS_ENABLE
 
 //! Info to add to the log.

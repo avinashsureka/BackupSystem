@@ -3,7 +3,7 @@
 WARNINGS_DISABLE
 #include <QFileInfo>
 #include <QLabel>
-#include <QString>
+//#include <QString>
 #include <QUrl>
 #include <QVariant>
 

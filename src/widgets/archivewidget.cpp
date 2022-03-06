@@ -13,10 +13,10 @@ WARNINGS_DISABLE
 #include <QModelIndex>
 #include <QModelIndexList>
 #include <QSortFilterProxyModel>
-#include <QStringList>
+//#include <QStringList>
 #include <QTableView>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_archivewidget.h"
 WARNINGS_ENABLE

@@ -5,7 +5,7 @@ WARNINGS_DISABLE
 #include <QFileInfo>
 #include <QFileInfoList>
 #include <QFlags>
-#include <QList>
+//#include <QList>
 #include <QRegExp>
 #include <QStack>
 #include <QUrl>

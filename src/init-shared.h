@@ -4,8 +4,8 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QList>
-#include <QString>
+//#include <QList>
+#include <QObject>
 WARNINGS_ENABLE
 
 /*! \file init-shared.h

@@ -2,7 +2,7 @@
 
 WARNINGS_DISABLE
 #include <QRegExp>
-#include <QStringList>
+//#include <QStringList>
 #include <QVariant>
 WARNINGS_ENABLE
 

@@ -2,7 +2,7 @@
 
 WARNINGS_DISABLE
 #include <QAbstractButton>
-#include <QString>
+//#include <QString>
 #include <QWidget>
 WARNINGS_ENABLE
 

@@ -6,12 +6,12 @@ WARNINGS_DISABLE
 #include <QCoreApplication>
 #include <QCursor>
 #include <QEvent>
-#include <QEventLoop>
+//#include <QEventLoop>
 #include <QKeyEvent>
 #include <QKeySequence>
 #include <QMenu>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_archivestabwidget.h"
 WARNINGS_ENABLE

@@ -13,7 +13,7 @@ WARNINGS_DISABLE
 #include <QTableWidget>
 #include <QTableWidgetItem>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_logindialog.h"
 WARNINGS_ENABLE

@@ -6,7 +6,7 @@
 WARNINGS_DISABLE
 #include <QLabel>
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 /* Forward declaration(s). */

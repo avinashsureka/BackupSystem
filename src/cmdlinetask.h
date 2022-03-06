@@ -4,10 +4,10 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QByteArray>
+//#include <QByteArray>
 #include <QObject>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 #include <QVariant>
 WARNINGS_ENABLE
 

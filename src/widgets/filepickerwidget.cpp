@@ -9,11 +9,11 @@ WARNINGS_DISABLE
 #include <QLineEdit>
 #include <QPersistentModelIndex>
 #include <QPushButton>
-#include <QStringList>
+//#include <QStringList>
 #include <QTreeView>
 #include <QUrl>
-#include <QVector>
-#include <Qt>
+//#include <QVector>
+//#include <Qt>
 
 #include "ui_filepickerwidget.h"
 WARNINGS_ENABLE

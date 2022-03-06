@@ -7,7 +7,7 @@ WARNINGS_DISABLE
 #include <QPalette>
 #include <QTextBlockFormat>
 #include <QTextDocument>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "LogEntry.h"

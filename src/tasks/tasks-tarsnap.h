@@ -5,9 +5,9 @@
 
 WARNINGS_DISABLE
 #include <QDateTime>
-#include <QList>
-#include <QString>
-#include <QStringList>
+//#include <QList>
+//#include <QString>
+//#include <QStringList>
 WARNINGS_ENABLE
 
 #include "messages/backuptaskdataptr.h"

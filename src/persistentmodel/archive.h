@@ -4,11 +4,11 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QByteArray>
+//#include <QByteArray>
 #include <QDateTime>
 #include <QMetaType>
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 #include "messages/archiveptr.h"

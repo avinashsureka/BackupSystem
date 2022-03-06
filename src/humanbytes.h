@@ -4,7 +4,7 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QString>
+#include <QObject>
 WARNINGS_ENABLE
 
 // Convert an int64 size in bytes to a human readable string using either

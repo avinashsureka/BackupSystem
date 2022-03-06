@@ -6,9 +6,9 @@ WARNINGS_DISABLE
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
-#include <QStringList>
+//#include <QStringList>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "debug.h"

@@ -5,12 +5,12 @@
 
 WARNINGS_DISABLE
 #include <QDateTime>
-#include <QList>
+//#include <QList>
 #include <QMetaType>
 #include <QObject>
 #include <QSharedPointer>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 #include <QUrl>
 #include <QUuid>
 WARNINGS_ENABLE

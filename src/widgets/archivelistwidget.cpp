@@ -6,7 +6,7 @@ WARNINGS_DISABLE
 #include <QListWidgetItem>
 #include <QMessageBox>
 #include <QRegExp>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "messages/archiverestoreoptions.h"

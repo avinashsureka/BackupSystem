@@ -6,8 +6,8 @@
 WARNINGS_DISABLE
 #include <QAtomicInt>
 #include <QObject>
-#include <QString>
-#include <QVector>
+//#include <QString>
+//#include <QVector>
 WARNINGS_ENABLE
 
 #include "messages/archivefilestat.h"

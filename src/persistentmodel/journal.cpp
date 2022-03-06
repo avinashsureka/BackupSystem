@@ -2,7 +2,7 @@
 
 WARNINGS_DISABLE
 #include <QDateTime>
-#include <QLatin1String>
+//#include <QLatin1String>
 #include <QRegExp>
 #include <QSqlError>
 #include <QSqlQuery>

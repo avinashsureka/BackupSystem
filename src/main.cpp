@@ -10,7 +10,7 @@ WARNINGS_ENABLE
 }
 
 WARNINGS_DISABLE
-#include <QList>
+//#include <QList>
 WARNINGS_ENABLE
 
 #include "app-cmdline.h"

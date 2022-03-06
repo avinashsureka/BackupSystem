@@ -5,9 +5,9 @@
 
 WARNINGS_DISABLE
 #include <QCoreApplication>
-#include <QList>
+//#include <QList>
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 /* Forward declaration(s). */

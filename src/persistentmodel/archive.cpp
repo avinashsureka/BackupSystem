@@ -2,14 +2,14 @@
 
 WARNINGS_DISABLE
 #include <QDateTime>
-#include <QLatin1String>
+//#include <QLatin1String>
 #include <QObject>
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
-#include <QString>
+//#include <QString>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "debug.h"

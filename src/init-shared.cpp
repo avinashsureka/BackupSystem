@@ -7,22 +7,22 @@ WARNINGS_DISABLE
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
-#include <QList>
-#include <QMap>
+//#include <QList>
+//#include <QMap>
 #include <QMetaType>
 #include <QObject>
 #include <QSettings>
 #include <QSqlQuery>
 #include <QStandardPaths>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 #include <QUrl>
 #include <QVariant>
-#include <QVector>
-#include <Qt>
+//#include <QVector>
+//#include <Qt>
 
 #ifndef QT_TESTLIB_LIB
-#include <QLatin1String>
+//#include <QLatin1String>
 #endif
 WARNINGS_ENABLE
 

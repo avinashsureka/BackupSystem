@@ -10,7 +10,7 @@ WARNINGS_DISABLE
 #include <QLabel>
 #include <QUrl>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_backuptabwidget.h"
 WARNINGS_ENABLE

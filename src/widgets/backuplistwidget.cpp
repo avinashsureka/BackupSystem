@@ -9,11 +9,11 @@ WARNINGS_DISABLE
 #include <QKeyEvent>
 #include <QMessageBox>
 #include <QMimeData>
-#include <QStringList>
+//#include <QStringList>
 #include <QUrl>
 #include <QVariant>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "TSettings.h"

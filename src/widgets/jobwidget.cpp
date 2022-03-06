@@ -11,12 +11,12 @@ WARNINGS_DISABLE
 #include <QMenu>
 #include <QMessageBox>
 #include <QSpinBox>
-#include <QStringList>
+//#include <QStringList>
 #include <QTabWidget>
 #include <QTimer>
 #include <QUrl>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_jobwidget.h"
 WARNINGS_ENABLE

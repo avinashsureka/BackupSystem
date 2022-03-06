@@ -5,7 +5,7 @@
 
 WARNINGS_DISABLE
 #include <QFileInfoList>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 //! A directory name or an error message.

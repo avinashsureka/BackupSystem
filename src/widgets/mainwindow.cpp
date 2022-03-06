@@ -2,7 +2,7 @@
 
 WARNINGS_DISABLE
 #include <QAction>
-#include <QByteArray>
+//#include <QByteArray>
 #include <QCloseEvent>
 #include <QDesktopServices>
 #include <QEvent>
@@ -14,14 +14,14 @@ WARNINGS_DISABLE
 #include <QMessageBox>
 #include <QPainter>
 #include <QPixmap>
-#include <QRect>
+//#include <QRect>
 #include <QSharedPointer>
 #include <QStyle>
 #include <QStyleOption>
 #include <QTabWidget>
 #include <QUrl>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_mainwindow.h"
 WARNINGS_ENABLE

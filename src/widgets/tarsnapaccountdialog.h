@@ -4,12 +4,12 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QByteArray>
+//#include <QByteArray>
 #include <QDate>
 #include <QDialog>
 #include <QObject>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 WARNINGS_ENABLE
 
 /* Forward declaration(s). */

@@ -8,8 +8,8 @@ WARNINGS_DISABLE
 #include <QModelIndex>
 #include <QObject>
 #include <QVariant>
-#include <QVector>
-#include <Qt>
+//#include <QVector>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "messages/archivefilestat.h"

@@ -10,10 +10,10 @@ WARNINGS_DISABLE
 #include <QMutexLocker>
 #include <QSqlDatabase>
 #include <QSqlError>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 
 static QMutex mutex;
 WARNINGS_ENABLE

@@ -5,9 +5,9 @@
 
 WARNINGS_DISABLE
 #include <QListWidget>
-#include <QMap>
+//#include <QMap>
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 #include "messages/archiveptr.h"

@@ -1,7 +1,7 @@
 #include "tasks/tasks-misc.h"
 
 WARNINGS_DISABLE
-#include <QStringList>
+//#include <QStringList>
 WARNINGS_ENABLE
 
 #include "cmdlinetask.h"

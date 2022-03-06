@@ -4,9 +4,9 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QMap>
+//#include <QMap>
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 #include "messages/backuptaskdataptr.h"

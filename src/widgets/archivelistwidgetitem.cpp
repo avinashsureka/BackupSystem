@@ -5,12 +5,12 @@ WARNINGS_DISABLE
 #include <QDateTime>
 #include <QEvent>
 #include <QKeySequence>
-#include <QLatin1String>
-#include <QSize>
+//#include <QLatin1String>
+//#include <QSize>
 #include <QToolButton>
-#include <QVector>
+//#include <QVector>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_archivelistwidgetitem.h"
 WARNINGS_ENABLE

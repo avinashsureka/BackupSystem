@@ -4,10 +4,10 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QColor>
+//#include <QColor>
 #include <QObject>
 #include <QPlainTextEdit>
-#include <QString>
+//#include <QString>
 #include <QTextCursor>
 WARNINGS_ENABLE
 

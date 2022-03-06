@@ -5,7 +5,7 @@
 
 WARNINGS_DISABLE
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 /*!

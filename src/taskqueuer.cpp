@@ -2,7 +2,7 @@
 
 WARNINGS_DISABLE
 #include <QCoreApplication>
-#include <QEventLoop>
+//#include <QEventLoop>
 #include <QThreadPool>
 #include <QUuid>
 WARNINGS_ENABLE

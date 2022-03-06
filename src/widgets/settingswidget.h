@@ -6,8 +6,8 @@
 WARNINGS_DISABLE
 #include <QDate>
 #include <QObject>
-#include <QString>
-#include <QStringList>
+//#include <QString>
+//#include <QStringList>
 #include <QWidget>
 WARNINGS_ENABLE
 

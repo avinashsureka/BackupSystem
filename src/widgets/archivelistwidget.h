@@ -4,10 +4,10 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QList>
+//#include <QList>
 #include <QListWidget>
 #include <QObject>
-#include <QString>
+//#include <QString>
 WARNINGS_ENABLE
 
 #include "messages/archiveptr.h"

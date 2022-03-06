@@ -10,7 +10,7 @@ WARNINGS_DISABLE
 #include <QLabel>
 #include <QMovie>
 #include <QPixmap>
-#include <QSize>
+//#include <QSize>
 #include <QWidget>
 
 #include "ui_backuplistwidgetitem.h"

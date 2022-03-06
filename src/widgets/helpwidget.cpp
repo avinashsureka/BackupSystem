@@ -16,7 +16,7 @@ WARNINGS_DISABLE
 #include <QTextStream>
 #include <QUrl>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_aboutwidget.h"
 #include "ui_consolewidget.h"

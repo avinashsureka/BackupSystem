@@ -4,9 +4,9 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
+#include <QObject>
 #include <QMap>
-#include <QString>
-#include <QStringList>
+//#include <QStringList>
 WARNINGS_ENABLE
 
 /* Forward declaration(s). */

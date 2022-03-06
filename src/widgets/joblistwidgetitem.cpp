@@ -5,9 +5,9 @@ WARNINGS_DISABLE
 #include <QDateTime>
 #include <QEvent>
 #include <QKeySequence>
-#include <QSize>
+//#include <QSize>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_joblistwidgetitem.h"
 WARNINGS_ENABLE

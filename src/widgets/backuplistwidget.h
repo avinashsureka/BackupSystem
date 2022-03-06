@@ -4,7 +4,7 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QList>
+//#include <QList>
 #include <QListWidget>
 #include <QObject>
 #include <QUrl>

@@ -4,12 +4,12 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QByteArray>
-#include <QChar>
-#include <QLatin1String>
+//#include <QByteArray>
+//#include <QChar>
+//#include <QLatin1String>
 #include <QObject>
-#include <QString>
-#include <QStringRef>
+//#include <QString>
+//#include <QStringRef>
 WARNINGS_ENABLE
 
 /* Set up global ConsoleLog. */

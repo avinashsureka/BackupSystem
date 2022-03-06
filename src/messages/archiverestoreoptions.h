@@ -4,8 +4,8 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QString>
-#include <QStringList>
+#include <QObject>
+//#include <QStringList>
 WARNINGS_ENABLE
 
 //! Options for restoring files

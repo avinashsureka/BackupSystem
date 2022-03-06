@@ -4,7 +4,7 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QString>
+#include <QObject>
 WARNINGS_ENABLE
 
 //! Metadata about a file.

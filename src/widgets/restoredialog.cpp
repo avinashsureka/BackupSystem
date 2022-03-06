@@ -1,7 +1,7 @@
 #include "restoredialog.h"
 
 WARNINGS_DISABLE
-#include <QChar>
+//#include <QChar>
 #include <QCheckBox>
 #include <QDir>
 #include <QFileDialog>
@@ -9,7 +9,7 @@ WARNINGS_DISABLE
 #include <QLabel>
 #include <QLineEdit>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_restoredialog.h"
 WARNINGS_ENABLE

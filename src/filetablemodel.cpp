@@ -3,7 +3,7 @@
 WARNINGS_DISABLE
 #include <QAbstractTableModel>
 #include <QVariant>
-#include <QVector>
+//#include <QVector>
 WARNINGS_ENABLE
 
 #include "messages/archivefilestat.h"

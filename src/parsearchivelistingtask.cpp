@@ -2,11 +2,11 @@
 
 WARNINGS_DISABLE
 #include <QAtomicInt>
-#include <QList>
+//#include <QList>
 #include <QRegExp>
-#include <QString>
-#include <QStringList>
-#include <QVector>
+//#include <QString>
+//#include <QStringList>
+//#include <QVector>
 WARNINGS_ENABLE
 
 #include "messages/archivefilestat.h"

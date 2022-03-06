@@ -1,13 +1,13 @@
 #include "tasks/tasks-tarsnap.h"
 
 WARNINGS_DISABLE
-#include <QChar>
-#include <QList>
+//#include <QChar>
+//#include <QList>
 #include <QRegExp>
-#include <QStringList>
+//#include <QStringList>
 #include <QUrl>
 #include <QVariant>
-#include <Qt>
+//#include <Qt>
 WARNINGS_ENABLE
 
 #include "TSettings.h"

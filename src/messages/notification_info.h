@@ -1,6 +1,8 @@
 #ifndef NOTIFICATION_INFO_H
 #define NOTIFICATION_INFO_H
 
+#include <QObject>
+
 //! Type of notification message.
 enum message_type
 {

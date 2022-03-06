@@ -4,7 +4,7 @@
 #include "warnings-disable.h"
 
 WARNINGS_DISABLE
-#include <QString>
+//#include <QString>
 #include <QVariant>
 WARNINGS_ENABLE
 

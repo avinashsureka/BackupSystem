@@ -16,7 +16,7 @@ WARNINGS_DISABLE
 #include <QUrl>
 #include <QVariant>
 #include <QWidget>
-#include <Qt>
+//#include <Qt>
 
 #include "ui_jobstabwidget.h"
 WARNINGS_ENABLE
