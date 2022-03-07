@@ -361,6 +361,30 @@ macx {
         src/cmdlinetask.cpp
 }
 
+unix {
+    INCLUDEPATH +=					\
+        lib/util/					\
+        libcperciva/util/
+
+    HEADERS += \
+        lib/util/optparse.h				\
+        lib/util/optparse_helper.h			\
+        libcperciva/util/getopt.h			\
+        libcperciva/util/warnp.h                        \
+        src/app-cmdline.h				\
+        src/app-gui.h
+
+    SOURCES += \
+        src/main.cpp					\
+        lib/util/optparse.c				\
+        lib/util/optparse_helper.c                      \
+        libcperciva/util/getopt.c			\
+        libcperciva/util/warnp.c                        \
+        src/app-cmdline.cpp				\
+        src/app-gui.cpp                                 \
+        src/cmdlinetask.cpp
+}
+
 #format.commands = find src/ tests/ lib/core/ lib/widgets/ lib/plugins	\
 #			-name \"*.h\" -or -name \"*.cpp\" |		\
 #			xargs clang-format13 -i
