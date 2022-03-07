@@ -8,7 +8,9 @@ WARNINGS_DISABLE
 #include <QIODevice>
 //#include <QLatin1String>
 #include <QObject>
+#ifndef Q_OS_IOS
 #include <QProcess>
+#endif
 #include <QProcessEnvironment>
 #include <QRegExp>
 //#include <QString>
@@ -54,8 +56,10 @@ struct cmdinfo
 static struct cmdinfo runCmd(const QString &cmd, const QStringList &args,
                              const QByteArray *stdin_msg = nullptr)
 {
-    QProcess       proc;
     struct cmdinfo info;
+#ifndef Q_OS_IOS
+    QProcess       proc;
+
     proc.start(cmd, args);
 
     // We can want stdin_msg to be empty but non-null; for example if we're
@@ -75,6 +79,7 @@ static struct cmdinfo runCmd(const QString &cmd, const QStringList &args,
 
     info.stderr_msg = proc.readAllStandardError();
     info.stdout_msg = proc.readAllStandardOutput();
+#endif
 
     return (info);
 }
