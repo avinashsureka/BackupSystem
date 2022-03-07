@@ -63,7 +63,6 @@ SOURCES +=						\
 	src/backenddata.cpp				\
 	src/backuptask.cpp				\
 	src/basetask.cpp				\
-	src/cmdlinetask.cpp				\
 	src/customfilesystemmodel.cpp			\
 	src/dir-utils.cpp				\
 	src/dirinfotask.cpp				\
@@ -302,7 +301,8 @@ win32 {
     SOURCES += \
         src/main-nunix.cpp				\
         src/app-cmdline-nunix.cpp			\
-        src/app-gui-nunix.cpp
+        src/app-gui-nunix.cpp                           \
+        src/cmdlinetask.cpp
 }
 
 android {
@@ -313,7 +313,8 @@ android {
     SOURCES += \
         src/main-nunix.cpp				\
         src/app-cmdline-nunix.cpp			\
-        src/app-gui-nunix.cpp
+        src/app-gui-nunix.cpp                           \
+        src/cmdlinetask.cpp
 }
 
 ios {
@@ -324,7 +325,8 @@ ios {
     SOURCES += \
         src/main-nunix.cpp				\
         src/app-cmdline-nunix.cpp			\
-        src/app-gui-nunix.cpp
+        src/app-gui-nunix.cpp                           \
+        src/cmdlinetask-ios.cpp
 }
 
 macx {
@@ -355,7 +357,8 @@ macx {
         libcperciva/util/getopt.c			\
         libcperciva/util/warnp.c                        \
         src/app-cmdline.cpp				\
-        src/app-gui.cpp
+        src/app-gui.cpp                                 \
+        src/cmdlinetask.cpp
 }
 
 #format.commands = find src/ tests/ lib/core/ lib/widgets/ lib/plugins	\

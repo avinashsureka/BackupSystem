@@ -14,7 +14,9 @@ WARNINGS_ENABLE
 #include "basetask.h"
 
 /* Forward declaration(s). */
+#ifndef Q_OS_IOS
 class QProcess;
+#endif
 
 /*
  * Normal exit codes are non-negative, but since we're just passing around
@@ -77,14 +79,21 @@ signals:
                   const QString &stdErr);
 
 private slots:
+#ifndef Q_OS_IOS
     void readProcessOutput(QProcess *process);
     void processFinished(QProcess *process);
     void processError(QProcess *process);
+#endif
     void gotStdout();
 
 private:
     // Housekeeping.
+#ifndef Q_OS_IOS
     QProcess *_process;
+#else
+    //TODO define new process in ios
+    QObject *_process;
+#endif
 
     //! Caller supplied data.
     QVariant _data;
