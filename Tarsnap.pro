@@ -316,6 +316,17 @@ android {
         src/app-gui-nunix.cpp
 }
 
+ios {
+    HEADERS += \
+        src/app-cmdline-nunix.h				\
+        src/app-gui-nunix.h
+
+    SOURCES += \
+        src/main-nunix.cpp				\
+        src/app-cmdline-nunix.cpp			\
+        src/app-gui-nunix.cpp
+}
+
 macx {
     LIBS += -framework Foundation
     ICON = resources/logos/tarsnap.icns
