@@ -6,29 +6,33 @@ WARNINGS_DISABLE
 #include <QObject>
 WARNINGS_ENABLE
 
+/*
 extern "C" {
 #include "optparse.h"
 WARNINGS_DISABLE
 #include "warnp.h"
 WARNINGS_ENABLE
 }
+*/
 
-#include "app-cmdline.h"
+#include "app-cmdline-nunix.h"
 #ifdef QT_GUI_LIB
-#include "app-gui.h"
+#include "app-gui-nunix.h"
 #include "app-setup.h"
 #endif
 #include "init-shared.h"
 
-static int run_cmdline(int argc, char *argv[], struct optparse *opt)
+static int run_cmdline(int argc, char *argv[]/*, struct optparse *opt*/)
 {
     int ret;
 
     // Initialization that doesn't require a QCoreApplication.
-    const QList<struct init_info> steps = init_shared(opt->config_dir);
+    // TODO appdata folder;
+    QString config_dir = "appdata";
+    const QList<struct init_info> steps = init_shared(config_dir/*opt->config_dir*/);
 
     // Basic initialization that cannot fail.
-    AppCmdline app(argc, argv, opt);
+    AppCmdline app(argc, argv/*, opt*/);
 
     // Act on any initialization failures.
     if(!app.handle_init(steps))
@@ -48,14 +52,14 @@ done:
     return (ret);
 }
 
-static int run_gui_main(int argc, char *argv[], struct optparse *opt,
+static int run_gui_main(int argc, char *argv[]/*, struct optparse *opt*/,
                         const QList<struct init_info> &steps)
 {
     int ret;
 
 #ifdef QT_GUI_LIB
     // Basic initialization that cannot fail.
-    AppGui app(argc, argv, opt);
+    AppGui app(argc, argv/*, opt*/);
 
     // Act on any initialization failures.
     if(!app.handle_init(steps))
@@ -119,14 +123,16 @@ done:
     return (ret);
 }
 
-static int run_gui(int argc, char *argv[], struct optparse *opt)
+static int run_gui(int argc, char *argv[]/*, struct optparse *opt*/)
 {
     int ret;
 
     while(true)
     {
         // Initialization that doesn't require a QCoreApplication.
-        const QList<struct init_info> steps = init_shared(opt->config_dir);
+        // TODO appdata folder;
+        QString config_dir = "appdata";
+        const QList<struct init_info> steps = init_shared(config_dir/*opt->config_dir*/);
 
         // Initialize & launch setup (if applicable).
         if(init_shared_need_setup())
@@ -137,7 +143,7 @@ static int run_gui(int argc, char *argv[], struct optparse *opt)
         else
         {
             // Initialize & launch main GUI.
-            if((ret = run_gui_main(argc, argv, opt, steps)) != 0)
+            if((ret = run_gui_main(argc, argv/*, opt*/, steps)) != 0)
                 goto done;
 
             // If we don't need to re-run the setup wizard, exit without an
@@ -155,27 +161,29 @@ done:
 
 int main(int argc, char *argv[])
 {
-    struct optparse *opt;
+    //struct optparse *opt;
     int              ret;
 
     // Initialize debug messages.
-    WARNP_INIT;
+    //WARNP_INIT;
 
     // Parse command-line arguments.
+    /*
     if((opt = optparse_parse(argc, argv)) == nullptr)
     {
         ret = EXIT_FAILURE;
         goto done;
     }
-
     // Should we use the gui or non-gui app?
     if(opt->check == 0)
         ret = run_gui(argc, argv, opt);
     else
         ret = run_cmdline(argc, argv, opt);
+    */
+    ret = run_gui(argc, argv);
 
 done:
-    optparse_free(opt);
+    //optparse_free(opt);
 
     return (ret);
 }

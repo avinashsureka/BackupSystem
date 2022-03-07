@@ -21,7 +21,7 @@ CONFIG += c++11
 TEMPLATE = app
 TARGET = tarsnap-gui
 
-VERSION = 1.1.0-unreleased
+VERSION = 1.1.0
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"
 DEFINES += QT_NO_FOREACH
 
@@ -50,8 +50,6 @@ env_LINK = $$(QMAKE_LINK)
 SOURCES +=						\
 	lib/core/ConsoleLog.cpp				\
 	lib/core/TSettings.cpp				\
-	lib/util/optparse.c				\
-	lib/util/optparse_helper.c			\
 	lib/widgets/TBusyLabel.cpp			\
 	lib/widgets/TElidedLabel.cpp			\
 	lib/widgets/TOkLabel.cpp			\
@@ -61,10 +59,6 @@ SOURCES +=						\
 	lib/widgets/TTextView.cpp			\
 	lib/widgets/TWizard.cpp				\
 	lib/widgets/TWizardPage.cpp			\
-	libcperciva/util/getopt.c			\
-	libcperciva/util/warnp.c			\
-	src/app-cmdline.cpp				\
-	src/app-gui.cpp					\
 	src/app-setup.cpp				\
 	src/backenddata.cpp				\
 	src/backuptask.cpp				\
@@ -77,7 +71,6 @@ SOURCES +=						\
 	src/humanbytes.cpp				\
 	src/init-shared.cpp				\
 	src/jobrunner.cpp				\
-	src/main.cpp					\
 	src/notification.cpp				\
 	src/parsearchivelistingtask.cpp			\
 	src/persistentmodel/archive.cpp			\
@@ -131,8 +124,6 @@ HEADERS +=						\
 	lib/core/LogEntry.h				\
 	lib/core/TSettings.h				\
 	lib/core/warnings-disable.h			\
-	lib/util/optparse.h				\
-	lib/util/optparse_helper.h			\
 	lib/widgets/TBusyLabel.h			\
 	lib/widgets/TElidedLabel.h			\
 	lib/widgets/TOkLabel.h				\
@@ -142,11 +133,7 @@ HEADERS +=						\
 	lib/widgets/TTextView.h				\
 	lib/widgets/TWizard.h				\
 	lib/widgets/TWizardPage.h			\
-	libcperciva/util/getopt.h			\
-	libcperciva/util/warnp.h			\
-	src/app-cmdline.h				\
-	src/app-gui.h					\
-	src/app-setup.h					\
+        src/app-setup.h					\
 	src/backenddata.h				\
 	src/backuptask.h				\
 	src/basetask.h					\
@@ -219,9 +206,7 @@ HEADERS +=						\
 
 INCLUDEPATH +=						\
 	lib/core/					\
-	lib/util/					\
 	lib/widgets/					\
-	libcperciva/util/				\
 	src/
 
 FORMS +=						\
@@ -309,6 +294,17 @@ OBJECTS_DIR = build/gui/
 
 #OPTIONAL_BUILD_ONLY_TESTS = tests/cli
 
+win32 {
+    HEADERS += \
+        src/app-cmdline-nunix.h				\
+        src/app-gui-nunix.h
+
+    SOURCES += \
+        src/main-nunix.cpp				\
+        src/app-cmdline-nunix.cpp			\
+        src/app-gui-nunix.cpp
+}
+
 macx {
     LIBS += -framework Foundation
     ICON = resources/logos/tarsnap.icns
@@ -317,6 +313,27 @@ macx {
     # Add VERSION to the app bundle.  (I wish that qmake did this!)
     INFO_PLIST_PATH = $$shell_quote($${OUT_PWD}/$${TARGET}.app/Contents/Info.plist)
     #QMAKE_POST_LINK += /usr/libexec/PlistBuddy -c \"Set :CFBundleGetInfoString $${VERSION}\" $${INFO_PLIST_PATH} ;
+
+    INCLUDEPATH +=					\
+        lib/util/					\
+        libcperciva/util/
+
+    HEADERS += \
+        lib/util/optparse.h				\
+        lib/util/optparse_helper.h			\
+        libcperciva/util/getopt.h			\
+        libcperciva/util/warnp.h                        \
+        src/app-cmdline.h				\
+        src/app-gui.h
+
+    SOURCES += \
+        src/main.cpp					\
+        lib/util/optparse.c				\
+        lib/util/optparse_helper.c                      \
+        libcperciva/util/getopt.c			\
+        libcperciva/util/warnp.c                        \
+        src/app-cmdline.cpp				\
+        src/app-gui.cpp
 }
 
 #format.commands = find src/ tests/ lib/core/ lib/widgets/ lib/plugins	\

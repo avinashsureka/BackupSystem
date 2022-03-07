@@ -167,6 +167,9 @@ void CmdlineTask::sigquit()
     if(_process == nullptr)
         return;
 
+#ifdef Q_OS_WIN
+    _process->kill(); //TODO check
+#else
 #if(QT_VERSION >= QT_VERSION_CHECK(5, 3, 0))
     // Assume that qint64 is a valid pid_t on this system.
     pid_t pid = static_cast<pid_t>(_process->processId());
@@ -178,6 +181,7 @@ void CmdlineTask::sigquit()
     // If this is sent to the Tarsnap client creating an archive, it will
     // truncate it and leave a '.part' partial archive.
     kill(pid, SIGQUIT);
+#endif
 }
 
 QString CmdlineTask::command() const
