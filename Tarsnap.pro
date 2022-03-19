@@ -361,7 +361,7 @@ macx {
         src/cmdlinetask.cpp
 }
 
-unix {
+unix:!macx:!ios {
     INCLUDEPATH +=					\
         lib/util/					\
         libcperciva/util/
